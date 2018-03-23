@@ -202,6 +202,12 @@ p.lead {
 .navbar-nav .nav-link {
     position: relative;
 }
+.navbar-nav .nav-item ul.dropdown-menu {
+    background-image: -moz-linear-gradient( 135deg, rgba(60, 8, 118, 0.8) 0%, rgba(250, 0, 118, 0.8) 100%);
+    background-image: -webkit-linear-gradient( 135deg, rgba(60, 8, 118, 0.8) 0%, rgba(250, 0, 118, 0.8) 100%);
+    background-image: -ms-linear-gradient( 135deg, rgba(60, 8, 118, 0.8) 0%, rgba(250, 0, 118, 0.8) 100%);
+    background-image: linear-gradient( 135deg, rgba(60, 8, 118, 0.8) 0%, rgba(250, 0, 118, 0.8) 100%);
+}
 
 @media (min-width: 992px) {
     .navbar-expand-lg .navbar-nav .nav-link {
@@ -237,6 +243,14 @@ header {
     padding: 100px 0 0;
     text-align: center;
     color: #FFF;
+}
+
+header p {
+    color: #FFF;
+}
+
+header .ce-intext.ce-right .ce-gallery,header  .ce-intext.ce-left .ce-gallery,header  .ce-above .ce-gallery {
+    margin-bottom:0;
 }
 
 .bg-gradient {

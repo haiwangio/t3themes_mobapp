@@ -45,34 +45,14 @@
 
 		<f:section name="Variant1">
 
-			<f:render section="LogoImage" arguments="{_all}" />
 			<f:render section="HeaderContent" arguments="{_all}" />
-
-		</f:section>
-
-		<f:section name="Variant2">
-
-			<div>
-		    	<div class="pull-left">
-					<f:render section="LogoImage" arguments="{_all}" />
-		    	</div>
-		    	<div class="pull-left">
-					<f:render section="LogoText" arguments="{_all}" />
-		    	</div>
-		    	<div class="pull-left">
-		    		<f:render section="HeaderContent" arguments="{_all}" />
-		    	</div>
-		    	<div class="clearfix"></div>
-			</div>
 
 		</f:section>
 
 		<f:section name="LogoImage">
 			<f:if condition="{t3themesConf.headerLogoUrl}">
-				<a href="/"><img style="background:{f:if(condition:t3themesConf.headerLogoBgColor,then:t3themesConf.headerLogoBgColor,else:'translarent')};padding:12px;margin:12px 0 0 0;padding-top:0;" src="{t3themesConf.headerLogoUrl}" alt="{t3themesConf.headerLogoUrl}" /></a>
-				<!-- f.media maybe? -->
+				<a class="navbar-brand" href="/"><img src="{t3themesConf.headerLogoUrl}" class="img-fluid" alt="logo" style="max-height:30px;"><!-- f.media maybe? --></a>
 			</f:if>
-
 		</f:section>
 
 		<f:section name="LogoText"><f:spaceless>
@@ -86,77 +66,41 @@
 		</f:spaceless></f:section>
 
 		<f:section name="HeaderContent">
-
 			<!-- HEADER CONTENT -->
 				<f:switch expression="{t3themesConf.headerDisplay}">
 					<f:case value="shownav">
 						<f:if condition="{f:cObject(typoscriptObjectPath:'{t3themesConf.headerTsnavigation}')}">
 							<f:then>
 								<!-- SHOW CHOOSEN NAVIGATION -->
-								{f:cObject(typoscriptObjectPath:'{t3themesConf.headerTsnavigation}')}
+								<div class="nav-menu fixed-top bg-gradient">
+								    <div class="container">
+								        <div class="row">
+								            <div class="col-md-12">
+								                <nav class="navbar navbar-dark navbar-expand-lg">
+													<f:render section="LogoImage" arguments="{_all}" /> <f:render section="LogoText" arguments="{_all}" /> <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon">
+								                    </span> </button>
+								                    {f:cObject(typoscriptObjectPath:'{t3themesConf.headerTsnavigation}')}
+								                </nav>
+								            </div>
+								        </div>
+								    </div>
+								</div>
 							</f:then>
 							<f:else>
 								<!-- SHOW DEFAULT THEME NAVIGATION -->
 								<f:if condition="{mainnavigation}">
-						            <!-- Static navbar -->
-						            <nav class="navbar navbar-expand-md navbar-light">
-						                <a class="navbar-brand" href="#"><f:render section="LogoText" arguments="{_all}" /></a>
-						                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-						                    <span class="navbar-toggler-icon"></span>
-						                </button>
-						                <div class="collapse navbar-collapse" id="navbarNavDropdown">
-						                    <ul class="navbar-nav">
-												<f:for each="{mainnavigation}" as="navitem">
-												<f:if condition="{navitem.children}">
-													<f:then>
-								                        <li class="nav-item dropdown">
-								                            <a class="nav-link dropdown-toggle" href="https://bootstrapthemes.co" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{navitem.title}</a>
-								                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-																<f:for each="{navitem.children}" as="subpage">
-																<f:if condition="{subpage.children}">
-																	<f:then>
-												                        <li class="nav-item dropdown">
-												                            <a class="nav-link dropdown-toggle" href="https://bootstrapthemes.co" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{subpage.title}</a>
-												                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-																				<f:for each="{subpage.children}" as="subsubpage">
-																				<f:if condition="{subsubpage.children}">
-																					<f:then>
-																                        <li class="nav-item dropdown">
-																                            <a class="nav-link dropdown-toggle" href="https://bootstrapthemes.co" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{subsubpage.title}</a>
-																                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-																                            </ul>
-																                        </li>
-																					</f:then>
-																					<f:else>
-																                        <li class="nav-item active">
-																                            <a class="nav-link" href="{subsubpage.link}">{subsubpage.title} <!-- <span class="sr-only">(current)</span> --></a>
-																                        </li>
-																					</f:else>
-																				</f:if>
-																				</f:for>
-												                            </ul>
-												                        </li>
-																	</f:then>
-																	<f:else>
-												                        <li class="nav-item active">
-												                            <a class="nav-link" href="{subpage.link}">{subpage.title} <!-- <span class="sr-only">(current)</span> --></a>
-												                        </li>
-																	</f:else>
-																</f:if>
-																</f:for>
-								                            </ul>
-								                        </li>
-													</f:then>
-													<f:else>
-								                        <li class="nav-item active">
-								                            <a class="nav-link" href="{navitem.link}">{navitem.title} <!-- <span class="sr-only">(current)</span> --></a>
-								                        </li>
-													</f:else>
-												</f:if>
-												</f:for>
-						                    </ul>
-						                </div>
-						            </nav>
+								<div class="nav-menu fixed-top bg-gradient">
+								    <div class="container">
+								        <div class="row">
+								            <div class="col-md-12">
+										        <nav class="navbar navbar-dark navbar-expand-lg">
+										            <f:render section="LogoImage" arguments="{_all}" /> <f:render section="LogoText" arguments="{_all}" /> <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+									            	<f:render partial="Navigation/Main" arguments="{_all}" />
+										        </nav>
+								            </div>
+								        </div>
+								    </div>
+								</div>
 								</f:if>
 							</f:else>
 						</f:if>

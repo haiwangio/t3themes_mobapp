@@ -24,18 +24,48 @@
 
 			<f:flashMessages />
 
-			<div class="panel panel-info h3">
-				<div class="panel-heading">
-					Check out the TER, if there is an extension called "t3content_mobapp".
-				</div>
-			</div>
+      <f:if condition="{t3contentLoaded}"><f:then></f:then>
+        <f:else>
+    			<div class="panel panel-info h3">
+    				<div class="panel-heading">Check out the TER, if there is an extension called "t3content_mobapp".</div>
+    			</div>
+        </f:else>
+      </f:if>
+
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="panel panel-info">
+            <div class="panel-heading">Section BG-Gradient</div>
+            <div class="panel-body">
+              <img src="../typo3conf/ext/t3themes_mobapp/Resources/Public/images/Content/SectionBG-Gradient.jpg" alt="SectionBG-Gradient" class="img-responsive" />
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="panel panel-default">
+            <div class="panel-body">
+              <textarea rows="10" name="" class="form-control" style="color:#02ff00;background:#212121;"><header class="section bg-gradient">
+  <div class="container mt-5">
+    <h1>Mobile App Landing Page Template</h1>
+    <p class="tagline">The one and only solution for any kind of mobila app landing needs. Just change the screenshots and texts and you are good to go. </p>
+    <br/>
+    <p class="tagline">The one and only solution for any kind of mobila app landing needs. Just change the screenshots and texts and you are good to go. </p>
+  </div>
+</header></textarea>
+              <div class="clearfix"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <hr/>
 
 			<div class="row">
 				<div class="col-sm-6">
 					<div class="panel panel-info">
-						<div class="panel-heading">Section BG-Gradient</div>
+						<div class="panel-heading">Hero</div>
 						<div class="panel-body">
-							<img src="../typo3conf/ext/t3themes_mobapp/Resources/Public/images/Content/SectionBG-Gradient.jpg" alt="SectionBG-Gradient" class="img-responsive" />
+							<img src="../typo3conf/ext/t3themes_mobapp/Resources/Public/images/Content/Hero.jpg" alt="Hero" class="img-responsive" />
 						</div>
 					</div>
 				</div>
@@ -94,7 +124,8 @@
 				<div class="col-sm-6">
 					<div class="panel panel-default">
 						<div class="panel-body">
-							<textarea rows="10" name="" class="form-control" style="color:#02ff00;background:#212121;"><div class="section light-bg">
+              <f:if condition="t3contentLoaded"><em>t3content element not yet done.</em></f:if>
+              <textarea rows="10" name="" class="form-control" style="color:#02ff00;background:#212121;"><div class="section light-bg">
   <div class="container">
     
     <div class="section-title">
@@ -146,64 +177,28 @@
 
   </div>
 </div><!-- // end .section --></textarea>
-							<div class="clearfix"></div>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<hr/>
-
-			<div class="row">
-				<div class="col-sm-6">
-					<div class="panel panel-info">
-						<div class="panel-heading">Section General</div>
-						<div class="panel-body">
-							<img src="../typo3conf/ext/t3themes_mobapp/Resources/Public/images/Content/Showcase.jpg" alt="Showcase" class="img-responsive" />
-						</div>
-					</div>
-				</div>
-				<div class="col-sm-6">
-					<div class="panel panel-default">
-						<div class="panel-body">
-							<textarea rows="10" name="" class="form-control" style="color:#02ff00;background:#212121;"><div class="section">
-  
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-6 offset-lg-6">
-        <div class="box-icon"><span class="ti-mobile gradient-fill ti-3x"></span></div>
-        <h2>Discover our App</h2>
-        <p class="mb-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati vel exercitationem eveniet vero maxime ratione </p>
-        <a href="#" class="btn btn-primary">Read more</a>
+              <div class="clearfix"></div>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="perspective-phone">
-      <img src="/typo3conf/ext/t3themes_mobapp/Resources/Public/images/perspective.png" alt="perspective phone" class="img-fluid">
-    </div>
 
-  </div>
-</div><!-- // end .section --></textarea>
-							<div class="clearfix"></div>
-						</div>
-					</div>
-				</div>
-			</div>
+      <hr/>
 
-			<hr/>
-
-			<div class="row">
-				<div class="col-sm-6">
-					<div class="panel panel-info">
-						<div class="panel-heading">Features</div>
-						<div class="panel-body">
-							<img src="../typo3conf/ext/t3themes_mobapp/Resources/Public/images/Content/Features.jpg" alt="Features" class="img-responsive" />
-						</div>
-					</div>
-				</div>
-				<div class="col-sm-6">
-					<div class="panel panel-default">
-						<div class="panel-body">
-							<textarea rows="10" name="" class="form-control" style="color:#02ff00;background:#212121;"><div class="section light-bg">
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="panel panel-info">
+            <div class="panel-heading">Features</div>
+            <div class="panel-body">
+              <img src="../typo3conf/ext/t3themes_mobapp/Resources/Public/images/Content/Features.jpg" alt="Features" class="img-responsive" />
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="panel panel-default">
+            <div class="panel-body">
+              <f:if condition="t3contentLoaded"><em>t3content element not yet done.</em></f:if>
+              <textarea rows="10" name="" class="form-control" style="color:#02ff00;background:#212121;"><div class="section light-bg">
   <div class="container">
     <div class="section-title">
       <small>FEATURES</small>

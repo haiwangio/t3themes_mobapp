@@ -1,6 +1,7 @@
 <?php
 namespace SalvatoreEckel\T3themesMobapp\Controller;
 
+use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 #use \TYPO3\CMS\Core\Utility\GeneralUtility;
 #use \TYPO3\CMS\Core\Messaging\AbstractMessage;
 #use \TYPO3\CMS\Extbase\Utility\DebuggerUtility;
@@ -18,6 +19,7 @@ class BaseController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
      */
     public function configurationAction()
     {
+        $this->view->assign('t3contentLoaded', ExtensionManagementUtility::isLoaded('t3content_mobapp'));
     }
 
     /**

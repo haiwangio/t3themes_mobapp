@@ -33,13 +33,19 @@ page {
                 includeSpacer = 1
                 as = mainnavigation
             }
-            20 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
-            20 {
-                entryLevel = 1
-                levels = 2
+            15 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+            15 {
+                special = directory
+                special {
+                    #data = current:1
+                    value = {$plugin.tx_t3themesmobapp.settings.navigationFooterPid}
+                    intval = 1
+                }
+                levels = 3
+                as = navigationFooter
                 expandAll = 0
-                includeSpacer = 1
-                as = subnavigation
+                includeSpacer = 0
+                titleField = nav_title // title
             }
             30 = SalvatoreEckel\T3cms\DataProcessing\T3themesConfProcessor
             30 {

@@ -1,0 +1,6 @@
+plugin.tx_t3themesmobapp {
+	settings {
+		# cat=plugin.tx_t3themesmobapp/basic/1; type=int; label=Navigation Footer PID (leave empty for rootpage)
+	    navigationFooterPid = 
+	}
+}

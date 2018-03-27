@@ -34,9 +34,16 @@
 
     <f:section name="LayoutInner">
 
-        <f:if condition="{t3themesConf.colPos1}">
-            <f:cObject typoscriptObjectPath="lib.dynamicContentSlide" data="{pageUid: '{data.uid}', colPos: '{t3themesConf.colPos1}'}" />
-        </f:if>
+        <small>
+            <f:if condition="{t3themesConf.colPos1}">
+                <f:cObject typoscriptObjectPath="lib.dynamicContentSlide" data="{pageUid: '{data.uid}', colPos: '{t3themesConf.colPos1}'}" />
+            </f:if>
+            <f:if condition="{navigationFooter}">
+                    <f:for each="{navigationFooter}" as="navItem">
+                        <f:link.page class="m-2 text-uppercase" pageUid="{navItem.uid}">{navItem.title}</f:link.page>
+                    </f:for>
+            </f:if>
+        </small>
 
     </f:section>
 

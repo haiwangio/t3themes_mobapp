@@ -4,7 +4,7 @@
 
 $EM_CONF[$_EXTKEY] = [
     'title' => 'TYPO3 Themes - Mobapp',
-    'description' => 'TYPO3 Template Theme Integration for EXT:t3cms. You can integrate the "ready-to-use html content" with fluid content, dce, flux, mask, cdeditor or something else.',
+    'description' => 'COLORLIBs MobAll Theme. Free Template Integration for EXT:t3cms. Brings full styled and configured website. Custom content elements maybe available in this theme.',
     'category' => 'distribution',
     'author' => 'Salvatore Eckel',
     'author_email' => 'salvaracer@gmx.de',

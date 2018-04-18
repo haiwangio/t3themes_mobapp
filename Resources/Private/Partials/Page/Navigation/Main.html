@@ -25,7 +25,7 @@
 
     <f:section name="NavItemDropdown">
         <li class="nav-item dropdown">
-            <a class="nav-link {f:if(condition:item.active,then:'active')} dropdown-toggle" href="https://bootstrapthemes.co" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{item.title}</a>
+            <a class="nav-link {f:if(condition:item.active,then:'active')} dropdown-toggle" href="{item.link}" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{item.title}</a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                 <f:for each="{item.children}" as="subpage">
                 <f:if condition="{subpage.children}">

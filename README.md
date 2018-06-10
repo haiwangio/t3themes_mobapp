@@ -5,7 +5,7 @@ This is a ready to use template for TYPO3. Together with EXT:t3cms you have an e
 ### General Information ###
 
 * t3themes_mobapp
-* v1.1.3
+* v1.2.0
 
 ### How do I get set up? ###
 
